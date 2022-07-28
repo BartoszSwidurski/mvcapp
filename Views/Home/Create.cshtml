@@ -1,0 +1,23 @@
+﻿@model MvcApp.Models.UserModel
+
+<h2>Add a User (Normal)</h2>
+
+
+@using (Html.BeginForm("Create", "Home"))
+{
+    <div>
+        <div>
+            @Html.LabelFor(x => x.Nickname)
+            @Html.TextBoxFor(x => x.Nickname)
+            @Html.ValidationMessageFor(x => x.Nickname)
+        </div>
+        <div>
+            @Html.LabelFor(x => x.Email)
+            @Html.TextBoxFor(x => x.Email)
+            @Html.ValidationMessageFor(x => x.Email)
+        </div>
+        <div>
+            <input type="submit" value="Save" />
+        </div>
+    </div>
+}
